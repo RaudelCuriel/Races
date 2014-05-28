@@ -57,6 +57,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\footer.png" />
+    <Content Include="images\icon.png" />
+    <Content Include="images\icon_grande.png" />
+    <Content Include="images\icon_med.png" />
+    <Content Include="images\icon_small.png" />
+    <Content Include="images\icon_vdm.png" />
+    <Content Include="images\logo_branix.png" />
+    <Content Include="images\logo_vilrac.png" />
+    <Content Include="images\top.jpg" />
+    <Content Include="images\tt.png" />
+    <Content Include="images\TTrojo.png" />
+    <Content Include="images\ttrojo_small.png" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
@@ -86,9 +98,7 @@
       <DependentUpon>race.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
