@@ -205,8 +205,8 @@
                     options: {
                         content: '<div class="infobox">' +
                         '' + dUTC.diff(fUTC, 'minutes') + ' min ago<br/>' +
-                        'Name: ' + data.nombre + '<br/>' +
-                        'Speed: ' + ~~(data.velocidad / 1.609344) + ' mph' +
+                        '' + data.nombre + '<br/>' +
+                        '' + ~~(data.velocidad / 1.609344) + ' mph' +
                         '</div>',
                         offset: {
                             y: -70,
@@ -6252,7 +6252,8 @@
                 overlay: { id: 'RM380', tag: 'overlay', latLng: [31.7392393, -116.0323715], options: { pane: 'overlayShadow', content: '<div class="miles">RM380</div>', offset: { y: 0, x: 0 } } }
             });
         }
-    </script>
+
+   </script>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no" />
     <!-- Override Default Apple Grey Bar with Black Bar -->
