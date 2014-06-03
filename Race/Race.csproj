@@ -71,13 +71,14 @@
     <Content Include="images\ttrojo_small.png" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
-    <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="race.aspx" />
     <Content Include="Scripts\date.min.js" />
     <Content Include="Scripts\gmap3.js" />
     <Content Include="Scripts\gmap3.min.js" />
-    <Content Include="Scripts\jquery-2.1.0.js" />
-    <Content Include="Scripts\jquery-2.1.0.min.js" />
+    <None Include="Properties\PublishProfiles\Races en mexlog.net.pubxml" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\json-minified.js" />
     <Content Include="Scripts\moment-with-langs.js" />
     <Content Include="Scripts\moment-with-langs.min.js" />
@@ -86,7 +87,7 @@
     <Content Include="Styles\Main.css" />
     <Content Include="Styles\normalize.css" />
     <Content Include="Web.config" />
-    <Content Include="Scripts\jquery-2.1.0.min.map" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
