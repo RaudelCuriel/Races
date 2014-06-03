@@ -1,4 +1,7 @@
-﻿/*
+﻿/*MODIFICACIONES JUNIO 2014*/
+
+
+/*
 * HTML5 Boilerplate
 *
 * What follows is the result of much research on cross-browser styling.
@@ -113,8 +116,11 @@ header
 
 .my_map
 {
+position: relative;
+top: 8%;
     width: 100%;
-    height: 80%;
+    height: 92%;
+    overflow: hidden;
     /*       margin-top: 60px;*/
     /*       margin-bottom: 150px;*/
 }
