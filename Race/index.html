@@ -4,7 +4,7 @@
     <title>Vildosola Racing</title>
     <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>-->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.js"></script>
     <script type="text/javascript" src="Scripts/gmap3.min.js"></script>
     <script type="text/javascript" src="Scripts/json-minified.js"></script>
     <script type="text/javascript" src="Scripts/moment.min.js"></script>
@@ -17,7 +17,8 @@
             initialize();
             drawRoute();
             drawMiles();
-            BindPos();
+            //BindPos();
+            BindPosnew();
         });
 
         function timer() {
@@ -182,31 +183,44 @@
             })
         }
 
+        function BindPosnew() {
+            var jqxhr = $.getJSON("http://192.168.10.178/vdmsdkwebapi/api/Gps/FE7A7ABE-813E-4184-81E1-2FE016D729D5/Position/0B83B9")
+             .done(function (data) {
+                 for (i = 0; i < data.totalItemsCount; i++) {
+                     createMarker(data.items[i]);
+                 }
+             })
+            .fail(function () {
+                console.log("error");
+            })
+        }
+
+
         function createMarker(data) {
             $('#my_map').gmap3({
                 clear: {
-                    id: data.IMEI,
-                    id: 'o' + data.IMEI
+                    id: data.uid,
+                    id: 'o' + data.uid
                 }
             });
-            var fUTC = new moment('1970-01-01').add('s', data.time);//.format("MM/DD/YYYY HH:mm:ss");
-            var dUTC = moment().add('h', 8);//.format("MM/DD/YYYY HH:mm:ss");
-            var latlng = [data.latitud, data.longitud];
+            var fUTC = new moment('1970-01-01').add('s', data.pos.t);//.format("MM/DD/YYYY HH:mm:ss");
+            var dUTC = moment().add('h', 7);//.format("MM/DD/YYYY HH:mm:ss");
+            var latlng = [data.pos.y, data.pos.x];
             $('#my_map').gmap3({
                 marker: {
-                    latLng: latlng, id: data.IMEI, options: {
+                    latLng: latlng, id: data.uid, options: {
                         icon: "images/icon.png",
                         zIndex: 999999, optimized: true
                     }
                 },
                 overlay: {
-                    id: 'o' + data.IMEI,
+                    id: 'o' + data.uid,
                     latLng: latlng,
                     options: {
                         content: '<div class="infobox">' +
                         '' + dUTC.diff(fUTC, 'minutes') + ' min ago<br/>' +
-                        '' + data.nombre + '<br/>' +
-                        '' + ~~(data.velocidad / 1.609344) + ' mph' +
+                        '' + data.nm + '<br/>' +
+                        '' + ~~(data.pos.s / 1.609344) + ' mph' +
                         '</div>',
                         offset: {
                             y: -70,
@@ -216,7 +230,7 @@
                 }
             });
             if (autof == 1)
-                $('#my_map').gmap3('get').panTo(new google.maps.LatLng(data.latitud, data.longitud));
+                $('#my_map').gmap3('get').panTo(new google.maps.LatLng(data.pos.y, data.pos.x));
         }
 
         function drawRoute() {
@@ -6253,7 +6267,7 @@
             });
         }
 
-   </script>
+    </script>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no" />
     <!-- Override Default Apple Grey Bar with Black Bar -->
