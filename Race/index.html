@@ -17,8 +17,7 @@
             initialize();
             drawRoute();
             drawMiles();
-            //BindPos();
-            BindPosnew();
+            BindPos();
         });
 
         function timer() {
@@ -165,26 +164,26 @@
             //});
         }
 
-        function BindPos() {
-            $.ajax({
-                type: "POST",
-                url: "race.aspx/GetPosition",
-                data: "{}",
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (msg) {
-                    var row = "";
-                    for (i = 0; i < msg.d.length; i++) {
-                        var data = jsonParse(msg.d[i]);
-                        createMarker(data);
-                    }
-                },
-                complete: setTimeout(timer, 30000)
-            })
-        }
+        //function BindPos() {
+        //    $.ajax({
+        //        type: "POST",
+        //        url: "race.aspx/GetPosition",
+        //        data: "{}",
+        //        contentType: "application/json; charset=utf-8",
+        //        dataType: "json",
+        //        success: function (msg) {
+        //            var row = "";
+        //            for (i = 0; i < msg.d.length; i++) {
+        //                var data = jsonParse(msg.d[i]);
+        //                createMarker(data);
+        //            }
+        //        },
+        //        complete: setTimeout(timer, 30000)
+        //    })
+        //}
 
-        function BindPosnew() {
-            var jqxhr = $.getJSON("http://192.168.10.178/vdmsdkwebapi/api/Gps/FE7A7ABE-813E-4184-81E1-2FE016D729D5/Position/0B83B9")
+        function BindPos() {
+            var jqxhr = $.getJSON("http://webapi.branix.com/api/Gps/FE7A7ABE-813E-4184-81E1-2FE016D729D5/Position/0B83B9")
              .done(function (data) {
                  for (i = 0; i < data.totalItemsCount; i++) {
                      createMarker(data.items[i]);
@@ -193,6 +192,10 @@
             .fail(function () {
                 console.log("error");
             })
+
+            jqxhr.complete(function () {
+                setTimeout(timer, 30000);
+            });
         }
 
 
@@ -204,7 +207,7 @@
                 }
             });
             var fUTC = new moment('1970-01-01').add('s', data.pos.t);//.format("MM/DD/YYYY HH:mm:ss");
-            var dUTC = moment().add('h', 7);//.format("MM/DD/YYYY HH:mm:ss");
+            var dUTC = moment().add('h', 8);//.format("MM/DD/YYYY HH:mm:ss");
             var latlng = [data.pos.y, data.pos.x];
             $('#my_map').gmap3({
                 marker: {
