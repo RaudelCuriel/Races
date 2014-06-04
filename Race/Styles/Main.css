@@ -100,11 +100,9 @@ header
     background: #000;
     z-index: 3000;
     box-shadow: 0px 0px 10px #000;
+    min-height: 60px;
 }
-header
-{
-	              margin-right: 10px;
-}
+
 
     body h3
     {
