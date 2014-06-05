@@ -1,81 +1,58 @@
 ﻿/*MODIFICACIONES JUNIO 2014*/
-
-
-/*
-* HTML5 Boilerplate
-*
-* What follows is the result of much research on cross-browser styling.
-* Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
-* Kroc Camen, and the H5BP dev community and team.
-*/
-
-/* ==========================================================================
-Base styles: opinionated defaults
-========================================================================== */
-
 html,
 button,
 input,
 select,
 textarea
 {
-    color: #222;
+color: #222;
 }
 
 body
 {
-    font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-    line-height: 1.4;
-    color: #fff;
+font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+line-height: 1.4;
+color: #fff;
 }
 
 a
 {
-    color: #b4c3d1;
-    font-weight: normal;
-    font-style: normal;
-    text-decoration: none;
+color: #b4c3d1;
+font-weight: normal;
+font-style: normal;
+text-decoration: none;
 }
 
-    a:visited
-    {
-        color: #b4c3d1;
-        text-decoration: underline;
-    }
+a:visited
+{
+color: #b4c3d1;
+text-decoration: underline;
+}
 
-    a:hover
-    {
-        color: #b4c3d1;
-    }
+a:hover
+{
+color: #b4c3d1;
+}
 
-/*
-* Remove the gap between images and the bottom of their containers: h5bp.com/i/440
-*/
 
 img
 {
-    vertical-align: middle;
+vertical-align: middle;
+max-width: 100%;
 }
 
-/*
-* Remove default fieldset styles.
-*/
 
 fieldset
 {
-    border: 0;
-    margin: 0;
-    padding: 0;
+border: 0;
+margin: 0;
+padding: 0;
 }
-
-/*
-* Allow only vertical resizing of textareas.
-*/
 
 textarea
 {
-    resize: vertical;
-    width: 100%; height: 100%; margin:0;
+resize: vertical;
+width: 100%; height: 100%; margin:0;
 }
 
 /* ==========================================================================
@@ -84,326 +61,289 @@ Author's custom styles
 html,
 body
 {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background: #000;
-    color: #FFF;
+width: 100%;
+height: 100%;
+margin: 0;
+background: #000;
+color: #FFF;
 }
 
 header
 {
-/*    position: fixed;*/
-    top: 0;
-    width: 100%;
-    /*	background: url(../images/top.jpg) left top repeat-x;*/
-    background: #000;
-    z-index: 3000;
-    box-shadow: 0px 0px 10px #000;
-    min-height: 30px;
+top: 0;
+width: 100%;
+background: #000;
+z-index: 3000;
+min-height: 30px;
 }
+/*header h3
+{
+	color: red;
+}*/
 
-
-    body h3
-    {
-        float: right;
-        margin-right: 10px;
-    }
+body h3
+{
+float: right;
+margin-right: 10px;
+}
 
 .logo
 {
-    position: relative;
-    left: 10px;
-    top: 10PX;
-    margin-right: 20px;
+position: relative;
+left: 10px;
+top: 10PX;
+margin-right: 20px;
+/*max-width: 200px;
+width: 20%;*/
 }
-
+/*MAPA*/
 .my_map
 {
 position: relative;
 /*top: 8%;*/
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    /*       margin-top: 60px;*/
-    /*       margin-bottom: 150px;*/
+width: 100%;
+height: 100%;
+overflow: hidden;
 }
 
-
-/*footer
-{
-    width: 100%;
-    text-align: center;
-    
-    bottom: 0;
-    font-size: 0.8em;
-    box-shadow: 0px 0px 10px #000;
-    background-color: #000;
-}
-
-    footer img
-    {
-        width: 100%;
-        max-width: 1114px;
-    }
-
-
-    footer p
-    {
-        margin: 0;
-        padding: 0;
-    }*/
 
 .chkpnt
 {
-    color: #FFFFFF;
-    border: 0px solid #000000;
-    background-color: rgba(0, 83, 255, 0.81);
-    width: auto;
-    line-height: 10px;
-    height: auto;
-    text-align: center;
-    padding: 8px;
-    border-radius: 3px;
-    box-shadow: 0 0 5px #000;
-    font-weight: bold;
-    font-size: 1em;
+color: #FFFFFF;
+border: 0px solid #000000;
+background-color: rgba(0, 83, 255, 0.81);
+width: auto;
+line-height: 10px;
+height: auto;
+text-align: center;
+padding: 8px;
+border-radius: 3px;
+box-shadow: 0 0 5px #000;
+font-weight: bold;
+font-size: 1em;
 }
 
 .miles
 {
-    color: #FFFFFF;
-    border: 0px solid #000000;
-    background-color: rgba(0, 105, 43, 0.71);
-    width: auto;
-    line-height: 10px;
-    height: auto;
-    text-align: center;
-    padding: 4px;
-    border-radius: 3px;
-    box-shadow: 0 0 5px #000;
-    font-weight: bold;
-    font-size: 1em;
+color: #FFFFFF;
+border: 0px solid #000000;
+background-color: rgba(0, 105, 43, 0.71);
+width: auto;
+line-height: 10px;
+height: auto;
+text-align: center;
+padding: 4px;
+border-radius: 3px;
+box-shadow: 0 0 5px #000;
+font-weight: bold;
+font-size: 1em;
 }
 
 .infobox
 {
-    color: #000000;
-    border: 1px solid #000000;
-    background-color: #FFFFFF;
-    width: auto;
-    line-height: 12px;
-    height: auto;
-    text-align: center;
-    padding: 5px;
-    border-radius: 3px;
-    font-weight: bold;
+color: #000000;
+border: 1px solid #000000;
+background-color: #FFFFFF;
+width: auto;
+line-height: 12px;
+height: auto;
+text-align: center;
+padding: 5px;
+border-radius: 3px;
+font-weight: bold;
 }
 
 .mapctr
 {
-    font: 1em "Arial", Arial, sans-serif;
-    color: black;
-    font-size: 12px;
-    padding: 4px;
+font: 1em "Arial", Arial, sans-serif;
+color: black;
+font-size: 12px;
+padding: 4px;
 }
 
 .mapdivctr
 {
-    background-color: white;
-    border: solid;
-    border-width: 1px;
-    cursor: pointer;
+background-color: white;
+border: solid;
+border-width: 1px;
+cursor: pointer;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 568px)
-{
 
-    /* STYLES GO HERE */
-
-
-
-
-    /* ==========================================================================
+/* ==========================================================================
 Helper classes
 ========================================================================== */
 
-    /* Prevent callout */
+/* Prevent callout */
 
-    .nocallout
-    {
-        -webkit-touch-callout: none;
-    }
+.nocallout
+{
+-webkit-touch-callout: none;
+}
 
-    .pressed
-    {
-        background-color: rgba(0, 0, 0, 0.7);
-    }
+.pressed
+{
+background-color: rgba(0, 0, 0, 0.7);
+}
 
-    /* A hack for HTML5 contenteditable attribute on mobile */
+/* A hack for HTML5 contenteditable attribute on mobile */
 
-    textarea[contenteditable]
-    {
-        -webkit-appearance: none;
-    }
+textarea[contenteditable]
+{
+-webkit-appearance: none;
+}
 
-    /* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
 they have been set as display: none */
 
-    .gifhidden
-    {
-        position: absolute;
-        left: -100%;
-    }
+.gifhidden
+{
+position: absolute;
+left: -100%;
+}
 
-    /*
+/*
 * Image replacement
 */
 
-    .ir
-    {
-        background-color: transparent;
-        background-repeat: no-repeat;
-        border: 0;
-        direction: ltr;
-        display: block;
-        overflow: hidden;
-        text-align: left;
-        text-indent: -999em;
-    }
+.ir
+{
+background-color: transparent;
+background-repeat: no-repeat;
+border: 0;
+direction: ltr;
+display: block;
+overflow: hidden;
+text-align: left;
+text-indent: -999em;
+}
 
-        .ir br
-        {
-            display: none;
-        }
+.ir br
+{
+display: none;
+}
 
-    /*
+/*
 * Hide from both screenreaders and browsers: h5bp.com/u
 */
 
-    .hidden
-    {
-        display: none !important;
-        visibility: hidden;
-    }
+.hidden
+{
+display: none !important;
+visibility: hidden;
+}
 
-    /*
+/*
 * Hide only visually, but have it available for screenreaders: h5bp.com/v
 */
 
-    .visuallyhidden
-    {
-        border: 0;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-    }
+.visuallyhidden
+{
+border: 0;
+clip: rect(0 0 0 0);
+height: 1px;
+margin: -1px;
+overflow: hidden;
+padding: 0;
+position: absolute;
+width: 1px;
+}
 
-        /*
+/*
 * Extends the .visuallyhidden class to allow the element to be focusable
 * when navigated to via the keyboard: h5bp.com/p
 */
 
-        .visuallyhidden.focusable:active,
-        .visuallyhidden.focusable:focus
-        {
-            clip: auto;
-            height: auto;
-            margin: 0;
-            overflow: visible;
-            position: static;
-            width: auto;
-        }
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus
+{
+clip: auto;
+height: auto;
+margin: 0;
+overflow: visible;
+position: static;
+width: auto;
+}
 
-    /*
+/*
 * Hide visually and from screenreaders, but maintain layout
 */
 
-    .invisible
-    {
-        visibility: hidden;
-    }
+.invisible
+{
+visibility: hidden;
+}
 
-    /**
+/**
 * Clearfix helper
 * Used to contain floats: h5bp.com/q
 */
 
-    .clearfix:before,
-    .clearfix:after
-    {
-        content: "";
-        display: table;
-    }
+.clearfix:before,
+.clearfix:after
+{
+content: "";
+display: table;
+}
 
-    .clearfix:after
-    {
-        clear: both;
-    }
+.clearfix:after
+{
+clear: both;
+}
 
-    /*
+/*
 * For IE 6/7 only
 * Include this rule to trigger hasLayout and contain floats.
 */
 
-    .clearfix
-    {
-        *zoom: 1;
-    }
+.clearfix
+{
+*zoom: 1;
+}
 
-    /* ==========================================================================
+/* ==========================================================================
 EXAMPLE Media Queries for Responsive Design.
 Theses examples override the primary ('mobile first') styles.
 Modify as content requires.
 ========================================================================== */
 
-    @media only screen and (min-device-width : 320px) and (max-device-width : 568px)
-    {
-        header
-        {
-            height: 30px;
-        }
-
-            header img
-            {
-                height: 50%;
-  
-             /*   top: 10px;*/
-            }
-    }
-
-    header h3
-    {
-        font-size: 0.8em;
-    }
-    .logo
-    {
-        position: relative;
-        left: 0px;
-        top: 0px;
-    }
-
-
-    @media only screen and (min-width: 800px)
-    {
-        /* Style adjustments for viewports that meet the condition */
-    }
-
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi)
-    {
-        /* Style adjustments for viewports that meet the condition */
-    }
-
-    /* Target ipad Devices in Portrait Orientation */
-    @media screen and (device-width: 768px) and (orientation:portrait)
-    {
-    }
-
-    @media screen and (device-width: 768px) and (orientation:landscape)
-    {
-    }
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px){
+header
+{
+height: 30px;
 }
+
+header h3
+{
+font-size: 0.6em;
+
+}
+.logo
+{
+/*width: 20%;*/
+margin-left: 5px;
+top: 0;
+}
+
+}
+
+@media screen and (max-width: 800px) {
+header
+{
+height: 30px;
+}
+
+header h3
+{
+font-size: 0.6em;
+
+}
+.logo
+{
+width: 20%;
+margin-left: 5px;
+top: 3px;
+}
+
+}
+
