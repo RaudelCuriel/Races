@@ -1,16 +1,4 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Vildosola Racing</title>
-    <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>-->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <script type="text/javascript" src="Scripts/jquery-2.1.1.js"></script>
-    <script type="text/javascript" src="Scripts/gmap3.min.js"></script>
-    <script type="text/javascript" src="Scripts/json-minified.js"></script>
-    <script type="text/javascript" src="Scripts/moment.min.js"></script>
-    <link href="Styles/Main.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript">
         var x = 0;
         var autof = 1;
         $(document).ready(function () {
@@ -7072,31 +7060,4 @@
                 overlay: { id: 'RM380', tag: 'overlay', latLng: [31.7392393, -116.0323715], options: { pane: 'overlayShadow', content: '<div class="miles">RM380</div>', offset: { y: 0, x: 0 } } }
             });
         }
-
-    </script>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no" />-->
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <!-- Override Default Apple Grey Bar with Black Bar -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <!-- Make the Web app Look more Native -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <!-- iPhone icon -->
-    <link rel="apple-touch-icon" href="images/iphone/57x57.png" />
-    <!-- iPhone Splash Screen -->
-    <link rel="apple-touch-startup-image" href="images/iphone/splashscreen.png" />
-
-</head>
-<body>
-    <header>
-        <img class="logo" src="images/logo_branix.png" alt="" />
-        <img class="logo" src="images/logo_vilrac.png" alt="" />
-        <h3>2014 Baja 500</h3>
-    </header>
-    
-    <!--        <img class="logo" src="images/tt.png" alt="" />-->
-
-    <div class="my_map" id="my_map"></div>
-</body>
-</html>
 
