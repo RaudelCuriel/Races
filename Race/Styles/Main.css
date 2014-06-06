@@ -18,7 +18,7 @@ body h3{float:right;margin-right:10px}
 	-moz-box-shadow: 1px 1px 3px #000000;
 	opacity: 0.85;
 }
-.infobox:after{content:" ";height:0;position:absolute;width:0;border:8px solid transparent;border-top-color:#920000;top:100%;left:0}
+.infobox:after{content:" ";height:0;position:absolute;width:0;border:8px solid transparent;border-top-color:#920000;top:100%;left:40%}
 .mapctr{font:12px "Arial",Arial,sans-serif;color:#000;padding:4px;font-size:1em}
 .mapdivctr{border:solid;border-width:1px;cursor:pointer;background:#fff}
 .nocallout{-webkit-touch-callout:none}
