@@ -6955,6 +6955,15 @@
 
         function drawMiles() {
             $('#my_map').gmap3({
+                overlay: { id: 'RM10', tag: 'overlay', latLng: [31.909347, -116.54845], options: { pane: 'overlayShadow', content: '<div class="miles">RM10</div>', offset: { y: 0, x: 0 } } }
+            });
+            $('#my_map').gmap3({
+                overlay: { id: 'RM20', tag: 'overlay', latLng: [31.910847, -116.435369], options: { pane: 'overlayShadow', content: '<div class="miles">RM20</div>', offset: { y: 0, x: 0 } } }
+            });
+            $('#my_map').gmap3({
+                overlay: { id: 'RM30', tag: 'overlay', latLng: [31.92891, -116.31604], options: { pane: 'overlayShadow', content: '<div class="miles">RM30</div>', offset: { y: 0, x: 0 } } }
+            });
+            $('#my_map').gmap3({
                 overlay: { id: 'RM40', tag: 'overlay', latLng: [31.839556, -116.2828171], options: { pane: 'overlayShadow', content: '<div class="miles">RM40</div>', offset: { y: 0, x: 0 } } }
             });
             $('#my_map').gmap3({
@@ -7058,6 +7067,15 @@
             });
             $('#my_map').gmap3({
                 overlay: { id: 'RM380', tag: 'overlay', latLng: [31.7392393, -116.0323715], options: { pane: 'overlayShadow', content: '<div class="miles">RM380</div>', offset: { y: 0, x: 0 } } }
+            });
+            $('#my_map').gmap3({
+                overlay: { id: 'RM405', tag: 'overlay', latLng: [31.880612, -116.275624], options: { pane: 'overlayShadow', content: '<div class="miles">RM405</div>', offset: { y: 0, x: 0 } } }
+            });
+            $('#my_map').gmap3({
+                overlay: { id: 'RM415', tag: 'overlay', latLng: [31.962409, -116.343775], options: { pane: 'overlayShadow', content: '<div class="miles">RM415</div>', offset: { y: 0, x: 0 } } }
+            });
+            $('#my_map').gmap3({
+                overlay: { id: 'RM420', tag: 'overlay', latLng: [31.942013, -116.365966], options: { pane: 'overlayShadow', content: '<div class="miles">RM420</div>', offset: { y: 0, x: 0 } } }
             });
         }
 
