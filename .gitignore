@@ -213,3 +213,5 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+Race/App_Data/aspnetdb_log.ldf
+Race/App_Data/ASPNETDB.MDF
