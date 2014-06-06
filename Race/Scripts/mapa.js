@@ -171,7 +171,7 @@
         //}
 
         function BindPos() {
-            var jqxhr = $.getJSON("http://webapi.branix.com/api/Gps/FE7A7ABE-813E-4184-81E1-2FE016D729D5/Position/0B83B9")
+            var jqxhr = $.getJSON("http://webapi.branix.com/api/Gps/FE7A7ABE-813E-4184-81E1-2FE016D729D5/Position/C64416")
              .done(function (data) {
                  for (i = 0; i < data.totalItemsCount; i++) {
                      createMarker(data.items[i]);
