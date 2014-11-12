@@ -226,7 +226,7 @@
                     latLng: latlng,
                     options: {
                         content: '<div class="infobox">' +
-                        '<img src="images/01.jpg" alt="" /><br/>Tavo Vildosola #21<br/>'+
+//                        '<img src="images/01.jpg" alt="" /><br/>Tavo Vildosola #21<br/>'+
                         '' + diferencia + '<br/>' +
                         '' + ~~(data.pos.s / 1.609344) + ' mph' +
                         '</div>',
