@@ -16,7 +16,7 @@ body h3{float:right;margin-right:10px}
 }
 .miles{color:#fff;border:0 solid #000;width:auto;line-height: 8px;height:auto;text-align:center;padding: 3px;border-radius:3px;box-shadow:0 0 5px #000;font-weight:200;font-size:1em;background: rgb(0, 105, 42)
 }
-.infobox{color: #000;background: #FFF;border: 2px solid #920000;width: auto;
+.infobox{color: #000;background: #FFF;border: 2px solid #cacaca;width: auto;
 height:auto;text-align:center;padding: 2px;border-radius:3px;
 box-shadow: 1px 1px 3px #000000;
 -moz-box-shadow: 1px 1px 3px #000000;
@@ -24,7 +24,7 @@ opacity: 0.85;
 font-size: .9em;
 line-height: 1.1em;
 }
-.infobox:after{content:" ";height:0;position:absolute;width:0;border:8px solid transparent;border-top-color:#920000;top:100%;left:40%}
+.infobox:after{content:" ";height:0;position:absolute;width:0;border:8px solid transparent;border-top-color:#ccc;top:100%;left:40%}
 .rm{
 background: none repeat scroll 0 0 rgb(0, 105, 42);
 border: 0 solid #000;
@@ -85,6 +85,10 @@ position: fixed;
 
 text-align: center;
 width: 55px;
+}
+.miles,chkpnt, .infobox
+{
+	font-size: 1em;
 }
 
 }
