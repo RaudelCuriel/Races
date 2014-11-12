@@ -221,13 +221,13 @@
                         zIndex: 999999, optimized: true
                     }
                 },
-                overlay: {
+               overlay: {
                     id: 'o' + data.uid,
                     latLng: latlng,
                     options: {
                         content: '<div class="infobox">' +
+                        '<img src="images/01.jpg" alt="" /><br/>Tavo Vildosola #21<br/>'+
                         '' + diferencia + '<br/>' +
-                        '' + data.nm + '<br/>' +
                         '' + ~~(data.pos.s / 1.609344) + ' mph' +
                         '</div>',
                         offset: {
