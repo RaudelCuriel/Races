@@ -73,7 +73,7 @@
             controlUI.style.borderWidth = '1px';
             controlUI.style.cursor = 'pointer';
             controlUI.style.textAlign = 'Miles';
-            controlUI.title = 'Miles ON';
+            controlUI.title = 'Show/Hide race miles';
             controlDiv.appendChild(controlUI);
 
             // Set CSS for the control interior
@@ -115,7 +115,7 @@
             controlUI.style.borderWidth = '1px';
             controlUI.style.cursor = 'pointer';
             controlUI.style.textAlign = 'Labels';
-            controlUI.title = 'Labels ON';
+            controlUI.title = 'Show/Hide vehicle info.';
             controlDiv.appendChild(controlUI);
 
             // Set CSS for the control interior
@@ -156,7 +156,7 @@
             controlUI.style.borderWidth = '1px';
             controlUI.style.cursor = 'pointer';
             controlUI.style.textAlign = 'Track';
-            controlUI.title = 'set automatic focus on vehicle';
+            controlUI.title = 'Set automatic focus on vehicle.';
 
             controlDiv.appendChild(controlUI);
 
@@ -167,18 +167,18 @@
             controlText.style.fontSize = '12px';
             controlText.style.paddingLeft = '4px';
             controlText.style.paddingRight = '4px';
-            controlText.innerHTML = 'auto track ON';
+            controlText.innerHTML = 'Track ON';
             controlUI.appendChild(controlText);
 
             // Setup the click event listeners: simply set the map to
             google.maps.event.addDomListener(controlUI, 'click', function () {
                 if (autof == 0) {
                     autof = 1;
-                    controlText.innerHTML = 'auto track ON';
+                    controlText.innerHTML = 'Track ON';
                 }
                 else if (autof == 1) {
                     autof = 0;
-                    controlText.innerHTML = 'auto track OFF';
+                    controlText.innerHTML = 'Track OFF';
                 }
             });
 
