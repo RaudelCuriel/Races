@@ -64,6 +64,10 @@ header{height:30px}
 header h3{font-size:.6em}
 .logo{margin-left:5px;top:0}
 .logo2{margin-left:5px;top:0}
+.infobox
+{
+	width: 75px;
+}
 }
 @media screen and (max-width: 800px) {
 header{height:30px}
