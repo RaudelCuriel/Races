@@ -21,7 +21,7 @@
                     options: {
                         center: latlng,
                         zoom: 10,
-                        mapTypeId: google.maps.MapTypeId.SATELLITE,
+                        mapTypeId: google.maps.MapTypeId.HYBRID,
                         mapTypeControl: true,
                         mapTypeControlOptions: {
                             style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
