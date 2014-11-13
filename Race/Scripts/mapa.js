@@ -237,8 +237,8 @@
                     id: 'o' + data.uid
                 }
             });
-            var fUTC = new moment('1970-01-01').add('s', data.pos.t);//.format("MM/DD/YYYY HH:mm:ss");
-            var dUTC = moment().add('h', 8);//.format("MM/DD/YYYY HH:mm:ss");
+            var fUTC = new moment('1970-01-01').add(data.pos.t,'s');//.format("MM/DD/YYYY HH:mm:ss");
+            var dUTC = moment().add(8,'h');//.format("MM/DD/YYYY HH:mm:ss");
             var diferencia = dUTC.diff(fUTC, 'minutes');
             if (diferencia < 10)
             { diferencia = diferencia + ' min ago' }
