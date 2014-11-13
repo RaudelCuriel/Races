@@ -1,5 +1,6 @@
 
-        var x = 0;
+        var MilesON = 0;
+        var labelsON = 0;
         var autof = 1;
         $(document).ready(function () {
             initialize();
@@ -39,10 +40,16 @@
             mostrarocultarmillasDiv.index = 1;
             map.controls[google.maps.ControlPosition.TOP_RIGHT].push(mostrarocultarmillasDiv);
 
+            //agregar el boton que muestra / oculta las etiquetas
+            var mostrarocultaretiquetasDiv = document.createElement('div');
+            var mostrarocultaretiquetasControl = new mostrarocultaretiquetas(mostrarocultaretiquetasDiv, map);
+            mostrarocultaretiquetasDiv.index = 2;
+            map.controls[google.maps.ControlPosition.TOP_RIGHT].push(mostrarocultaretiquetasDiv);
+
             //agregar el boton que indica si se hace autofocus o no
             var autofocusDiv = document.createElement('div');
             var autofocusControl = new autofocus(autofocusDiv, map);
-            autofocusDiv.index = 2;
+            autofocusDiv.index = 3;
             map.controls[google.maps.ControlPosition.TOP_RIGHT].push(autofocusDiv);
 
             google.maps.event.addDomListener(window, 'resize', function () {
@@ -66,7 +73,7 @@
             controlUI.style.borderWidth = '1px';
             controlUI.style.cursor = 'pointer';
             controlUI.style.textAlign = 'Miles';
-            controlUI.title = 'show/hide miles';
+            controlUI.title = 'Miles ON';
             controlDiv.appendChild(controlUI);
 
             // Set CSS for the control interior
@@ -76,22 +83,65 @@
             controlText.style.fontSize = '12px';
             controlText.style.paddingLeft = '4px';
             controlText.style.paddingRight = '4px';
-            controlText.innerHTML = 'Show/Hide miles';
+            controlText.innerHTML = 'Miles ON';
             controlUI.appendChild(controlText);
 
             // Setup the click event listeners: simply set the map to
             google.maps.event.addDomListener(controlUI, 'click', function () {
-                if (x == 0) {
-                    x = 1;
+                if (MilesON == 0) {
+                    MilesON = 1;
                     clearMarker('overlay');
+                    controlText.innerHTML = 'Miles OFF';
                 }
-                else if (x == 1) {
-                    x = 0;
+                else if (MilesON == 1) {
+                    MilesON = 0;
                     drawMiles();
+                    controlText.innerHTML = 'Miles ON';
                 }
             });
         }
 
+        function mostrarocultaretiquetas(controlDiv, map) {
+
+            // Set CSS styles for the DIV containing the control
+            // Setting padding to 5 px will offset the control
+            // from the edge of the map
+            controlDiv.style.padding = '5px';
+
+            // Set CSS for the control border
+            var controlUI = document.createElement('div');
+            controlUI.style.backgroundColor = 'white';
+            controlUI.style.borderStyle = 'solid';
+            controlUI.style.borderWidth = '1px';
+            controlUI.style.cursor = 'pointer';
+            controlUI.style.textAlign = 'Labels';
+            controlUI.title = 'Labels ON';
+            controlDiv.appendChild(controlUI);
+
+            // Set CSS for the control interior
+            var controlText = document.createElement('div');
+            controlText.style.fontFamily = 'Arial,sans-serif';
+            controlText.style.color = 'black';
+            controlText.style.fontSize = '12px';
+            controlText.style.paddingLeft = '4px';
+            controlText.style.paddingRight = '4px';
+            controlText.innerHTML = 'Labels ON';
+            controlUI.appendChild(controlText);
+
+            // Setup the click event listeners: simply set the map to
+            google.maps.event.addDomListener(controlUI, 'click', function () {
+                if (labelsON == 0) {
+                    labelsON = 1;
+                    clearMarker('labelinfobox');
+                    controlText.innerHTML = 'Labels OFF';
+                }
+                else if (labelsON == 1) {
+                    labelsON = 0;
+                    drawMiles();
+                    controlText.innerHTML = 'Labels ON';
+                }
+            });
+        }
         function autofocus(controlDiv, map) {
 
             // Set CSS styles for the DIV containing the control
@@ -152,24 +202,6 @@
             //});
         }
 
-        //function BindPos() {
-        //    $.ajax({
-        //        type: "POST",
-        //        url: "race.aspx/GetPosition",
-        //        data: "{}",
-        //        contentType: "application/json; charset=utf-8",
-        //        dataType: "json",
-        //        success: function (msg) {
-        //            var row = "";
-        //            for (i = 0; i < msg.d.length; i++) {
-        //                var data = jsonParse(msg.d[i]);
-        //                createMarker(data);
-        //            }
-        //        },
-        //        complete: setTimeout(timer, 30000)
-        //    })
-        //}
-
         function BindPos() {
             var jqxhr = $.getJSON("http://webapi.branix.com/api/Gps/FE7A7ABE-813E-4184-81E1-2FE016D729D5/Position/0B83B9")
              .done(function (data) {
@@ -194,7 +226,7 @@
             })
 
             jqxhr.complete(function () {
-                setTimeout(timer, 30000);
+                setTimeout(timer, 15000);
             });
         }
 
@@ -214,29 +246,42 @@
             else
             { diferencia = '> 10 min' }
             var latlng = [data.pos.y, data.pos.x];
-            $('#my_map').gmap3({
-                marker: {
-                    latLng: latlng, id: data.uid, options: {
-                        icon: "images/" + imagen,
-                        zIndex: 999999, optimized: true
-                    }
-                },
-               overlay: {
-                    id: 'o' + data.uid,
-                    latLng: latlng,
-                    options: {
-                        content: '<div class="infobox">' +
-//                        '<img src="images/01.jpg" alt="" /><br/>Tavo Vildosola #21<br/>'+
-                        '' + diferencia + '<br/>' +
-                        '' + ~~(data.pos.s / 1.609344) + ' mph' +
-                        '</div>',
-                        offset: {
-                            y: -105,
-                            x: -35
+            if (labelsON == 0) {
+                $('#my_map').gmap3({
+                    marker: {
+                        latLng: latlng, id: data.uid, options: {
+                            icon: "images/" + imagen,
+                            zIndex: 999999, optimized: true
+                        }
+                    },
+                    overlay: {
+                        id: 'o' + data.uid,
+                        latLng: latlng,
+                        tag: 'labelinfobox',
+                        options: {
+                            content: '<div class="infobox">' +
+                            '' + diferencia + '<br/>' +
+                            '' + ~~(data.pos.s / 1.609344) + ' mph' +
+                            '</div>',
+                            offset: {
+                                y: -85,
+                                x: -25
+                            }
                         }
                     }
-                }
-            });
+                });
+            }
+            else {
+                $('#my_map').gmap3({
+                    marker: {
+                        latLng: latlng, id: data.uid, options: {
+                            icon: "images/" + imagen,
+                            zIndex: 999999, optimized: true
+                        }
+                    }
+                });
+            }
+            
         }
 
         function drawRoute() {
