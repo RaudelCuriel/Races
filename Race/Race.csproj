@@ -62,6 +62,8 @@
     </Content>
     <Content Include="images\footer.png" />
     <Content Include="images\icon.png" />
+    <Content Include="images\icono-21.png" />
+    <Content Include="images\icono-7.png" />
     <Content Include="images\icon_grande.png" />
     <Content Include="images\icon_med.png" />
     <Content Include="images\icon_small.png" />
