@@ -137,7 +137,6 @@
                 }
                 else if (labelsON == 1) {
                     labelsON = 0;
-                    drawMiles();
                     controlText.innerHTML = 'Labels ON';
                 }
             });
