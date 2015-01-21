@@ -18,7 +18,28 @@ namespace Race
         {
 
         }
-
+        [WebMethod]
+        public static string[] GetPositionScore()
+        {
+            try
+            {
+                List<Posicion> poslist = GetPos();
+                string[] array = new string[poslist.Count];
+                int i = 0;
+                foreach (Posicion posicion in poslist)
+                {
+                    var jss = new JavaScriptSerializer();
+                    string serializedPerson = jss.Serialize(posicion);
+                    array[i] = serializedPerson;
+                    i++;
+                }
+                return array;
+            }
+            catch
+            {
+                return null;
+            }
+        }
         [WebMethod]
         public static string[] GetPosition()
         {
