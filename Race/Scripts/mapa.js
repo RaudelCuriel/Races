@@ -206,7 +206,8 @@
             var jqxhr = $.getJSON("http://webapi.branix.com/api/Gps/FE7A7ABE-813E-4184-81E1-2FE016D729D5/Position/C64416")
              .done(function (data) {
                  for (i = 0; i < data.totalItemsCount; i++) {
-                     createMarker(data.items[i], "icono-21.png");
+                     //createMarker(data.items[i], "icono-21.png"); 
+                     createMarker(data.items[i], "21.png");
                      if (autof == 1)
                          $('#my_map').gmap3('get').panTo(new google.maps.LatLng(data.items[i].pos.y, data.items[i].pos.x));
                  }
@@ -222,31 +223,38 @@
 
         function createMarker(data,imagen) {
             var fUTC = new moment('1970-01-01').add(data.pos.t, 's');//.format("MM/DD/YYYY HH:mm:ss");
-            var dUTC = moment().add(7, 'h');//.format("MM/DD/YYYY HH:mm:ss");
+            var dUTC = moment().add(8, 'h');//.format("MM/DD/YYYY HH:mm:ss");
             var diferencia = dUTC.diff(fUTC, 'minutes');
             if (diferencia < 10)
             { diferencia = diferencia + ' min ago' }
             else
             { diferencia = '> 10 min' }
-            
-            
+           
             var mymarker = $("#my_map").gmap3({ get: { id: data.uid } });
             if (mymarker) {
                 mymarker.setPosition(new google.maps.LatLng(data.pos.y, data.pos.x));
                 mymarker = $("#my_map").gmap3({ get: { id: 'o' + data.uid } });
                 if (mymarker) {
-                    var myoptions = {
-                        content: '<div class="infobox">' +
-                        '' + diferencia + '<br/>' +
-                        '' + ~~(data.pos.s / 1.609344) + ' mph' +
-                        '</div>',
-                        offset: {
-                            y: -85,
-                            x: -25
+                    clearMarker('o' + data.uid);
+                    var latlng = [data.pos.y, data.pos.x];
+                    $('#my_map').gmap3({
+                        overlay: {
+                            id: 'o' + data.uid,
+                            latLng: latlng,
+                            tag: 'labelinfobox',
+                            options: {
+                                content: '<div class="infobox">' +
+                                '' + diferencia + '<br/>' +
+                                '' + ~~(data.pos.s / 1.609344) + ' mph' +
+                                '</div>',
+                                offset: {
+                                    y: -97,
+                                    x: -26
+                                }
+                            }
                         }
-                    }
-                    mymarker.setOptions(myoptions);
-                    mymarker.setPosition(new google.maps.LatLng(data.pos.y, data.pos.x));
+                    });
+                    //mymarker.setPosition(new google.maps.LatLng(data.pos.y, data.pos.x));
                 }
                 else {
                     if (labelsON == 0) {
@@ -262,8 +270,8 @@
                                     '' + ~~(data.pos.s / 1.609344) + ' mph' +
                                     '</div>',
                                     offset: {
-                                        y: -85,
-                                        x: -25
+                                        y: -97,
+                                        x: -26
                                     }
                                 }
                             }
@@ -272,6 +280,12 @@
                 }
             }
             else {
+                var image = new google.maps.MarkerImage(
+							'images/' + imagen,
+							null, // size
+							null, // origin
+							new google.maps.Point( 22, 61 ),
+							new google.maps.Size( 45, 61 ));
                 var latlng = [data.pos.y, data.pos.x];
                 $('#my_map').gmap3({
                     clear: {
@@ -284,8 +298,9 @@
                     $('#my_map').gmap3({
                         marker: {
                             latLng: latlng, id: data.uid, options: {
-                                icon: "images/" + imagen,
-                                zIndex: 999999, optimized: true
+                                icon: image,
+                                title: 'trophy',
+                                zIndex: 999999, optimized: false
                             }
                         },
                         overlay: {
@@ -298,8 +313,8 @@
                                 '' + ~~(data.pos.s / 1.609344) + ' mph' +
                                 '</div>',
                                 offset: {
-                                    y: -85,
-                                    x: -25
+                                    y: -97,
+                                    x: -26
                                 }
                             }
                         }
@@ -309,8 +324,9 @@
                     $('#my_map').gmap3({
                         marker: {
                             latLng: latlng, id: data.uid, options: {
-                                icon: "images/" + imagen,
-                                zIndex: 999999, optimized: true
+                                icon: image,
+                                title: 'trophy',
+                                zIndex: 999999, optimized: false
                             }
                         }
                     });
