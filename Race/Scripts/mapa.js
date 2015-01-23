@@ -206,10 +206,7 @@
             var jqxhr = $.getJSON("http://webapi.branix.com/api/Gps/FE7A7ABE-813E-4184-81E1-2FE016D729D5/Position/C64416")
              .done(function (data) {
                  for (i = 0; i < data.totalItemsCount; i++) {
-<<<<<<< Updated upstream
                      //createMarker(data.items[i], "icono-21.png"); 
-=======
->>>>>>> Stashed changes
                      createMarker(data.items[i], "21.png");
                      if (autof == 1)
                          $('#my_map').gmap3('get').panTo(new google.maps.LatLng(data.items[i].pos.y, data.items[i].pos.x));
