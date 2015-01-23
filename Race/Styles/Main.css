@@ -1,4 +1,5 @@
-﻿html,button,input,select,textarea{color:#222}
+﻿@import url(http://fonts.googleapis.com/css?family=Jura:600);
+html,button,input,select,textarea{color:#222}
 body{font:1em/1.4 "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;color:#fff}
 a{color:#b4c3d1;font-weight:400;font-style:normal;text-decoration:none}
 a:visited{color:#b4c3d1;text-decoration:underline}
@@ -6,9 +7,12 @@ a:hover{color:#b4c3d1}
 img{vertical-align:middle}
 fieldset{border:0;margin:0;padding:0}
 textarea{resize:vertical;width:100%;height:100%;margin:0}
-html,body{width:100%;height:100%;margin:0;background:#000;color:#FFF}
-header{top:0;width:100%;background:#000;z-index:3000;min-height:30px}
-body h3{float:right;margin-right:10px}
+html,body{width:100%;height:100%;margin:0;
+	color:#FFF;background-image: url(../images/footer_lodyas.png);
+}
+header{top:0;width:100%;
+	z-index:3000;min-height:30px}
+body h3{float:right;margin-right:10px;font-family: 'Jura', sans-serif;}
 .logo{position:relative;left:10px;top:10px;margin-right:20px}
 .logo2{position:relative;left:10px;top:10px;margin-right:20px}
 .my_map{position:relative;width:100%;height:100%;overflow:hidden}

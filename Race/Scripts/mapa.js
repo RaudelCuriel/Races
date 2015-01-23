@@ -207,7 +207,7 @@
              .done(function (data) {
                  for (i = 0; i < data.totalItemsCount; i++) {
                      //createMarker(data.items[i], "icono-21.png"); 
-                     createMarker(data.items[i], "21.png");
+                     createMarker(data.items[i], "tavo.png");
                      if (autof == 1)
                          $('#my_map').gmap3('get').panTo(new google.maps.LatLng(data.items[i].pos.y, data.items[i].pos.x));
                  }
