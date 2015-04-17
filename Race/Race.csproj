@@ -43,8 +43,10 @@
     </Content>
     <Content Include="images\21.png" />
     <Content Include="images\footer.png" />
+    <Content Include="images\footer_lodyas.png" />
     <Content Include="images\logo_branix.png" />
     <Content Include="images\logo_vilrac.png" />
+    <Content Include="images\tavo.png" />
     <Content Include="images\top.jpg" />
     <Content Include="images\tt.png" />
     <Content Include="images\TTrojo.png" />
