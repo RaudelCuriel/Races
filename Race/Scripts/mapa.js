@@ -354,7 +354,7 @@
             //$('#my_map').gmap3({
             //    overlay: { id: 'Start', tag: 'overlay', latLng: [22.893975, -109.903467], options: { pane: 'overlayShadow', content: '<div class="chkpnt">Start</div>', offset: { y: 0, x: 0 } } }
             //});
-            $('#my_map').gmap3({ overlay: { id: 'Start/Finish', tag: 'overlay', latLng: [31.857666, -116.619554], options: { pane: 'overlayShadow', content: '<div class="chkpnt">Finish</div>', offset: { y: 0, x: 0 } } } });
+            $('#my_map').gmap3({ overlay: { id: 'StartFinish', tag: 'overlay', latLng: [31.857666, -116.619554], options: { pane: 'overlayShadow', content: '<div class="chkpnt">Start/Finish</div>', offset: { y: 0, x: 0 } } } });
 
             $('#my_map').gmap3({ overlay: { id: 'rm10', tag: 'overlay', latLng: [31.906966 ,- 116.542965], options: { pane: 'overlayShadow', content: '<div class="miles">10</div>', offset: { y: 0, x: 0 } } } });
             $('#my_map').gmap3({ overlay: { id: 'rm20', tag: 'overlay', latLng: [31.893706 ,- 116.41526], options: { pane: 'overlayShadow', content: '<div class="miles">20</div>', offset: { y: 0, x: 0 } } } });
