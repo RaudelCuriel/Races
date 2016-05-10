@@ -1,4 +1,4 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Jura:600);
+@import url(http://fonts.googleapis.com/css?family=Jura:600);
 html,button,input,select,textarea{color:#222}
 body{font:1em/1.4 "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;color:#fff}
 a{color:#b4c3d1;font-weight:400;font-style:normal;text-decoration:none}
@@ -15,6 +15,7 @@ header{top:0;width:100%;
 body h3{float:right;margin-right:10px;font-family: 'Jura', sans-serif;}
 .logo{position:relative;left:10px;top:10px;margin-right:20px}
 .logo2{position:relative;left:10px;top:10px;margin-right:20px}
+.logo3{position:relative;left:10px;top:10px;margin-right:20px}
 .my_map{position:relative;width:100%;height:100%;overflow:hidden}
 .chkpnt{color:#fff;border:0 solid #000;width:auto;line-height: 8px;height:auto;text-align:center;padding: 3px;border-radius:3px;box-shadow:0 0 5px #000;font-weight:200;font-size:1em;background: rgb(0, 83, 255)
 }
