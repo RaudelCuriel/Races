@@ -58,9 +58,9 @@
     <Content Include="Scripts\gmap3.js" />
     <Content Include="Scripts\gmap3.min.js" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
-    <None Include="Scripts\jquery-2.2.0.intellisense.js" />
-    <Content Include="Scripts\jquery-2.2.0.js" />
-    <Content Include="Scripts\jquery-2.2.0.min.js" />
+    <None Include="Scripts\jquery-2.2.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.3.js" />
+    <Content Include="Scripts\jquery-2.2.3.min.js" />
     <Content Include="Scripts\json-minified.js" />
     <Content Include="Scripts\mapa.js" />
     <Content Include="Scripts\mapa.min.js" />
@@ -71,7 +71,7 @@
     <Content Include="Styles\Main.css" />
     <Content Include="Styles\normalize.css" />
     <Content Include="Styles\pulsate.css" />
-    <Content Include="Scripts\jquery-2.2.0.min.map" />
+    <Content Include="Scripts\jquery-2.2.3.min.map" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
