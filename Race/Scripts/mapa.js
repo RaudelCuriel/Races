@@ -200,22 +200,32 @@
         }
 
         function BindPos() {
-            var jqxhr = $.getJSON("http://webapi.branix.com/api/Gps/FE7A7ABE-813E-4184-81E1-2FE016D729D5/Position/C64416")
+            var jqxhr = $.getJSON("http://webapi.branix.com/api/Gps/FE7A7ABE-813E-4184-81E1-2FE016D729D5/Position/0B83B9")
+             .done(function (data) {
+                 for (i = 0; i < data.totalItemsCount; i++) {
+                     createMarker(data.items[i], "negro.png");
+                 }
+             })
+            .fail(function () {
+                console.log("error");
+            });
+            jqxhr = null;
+            jqxhr = $.getJSON("http://webapi.branix.com/api/Gps/FE7A7ABE-813E-4184-81E1-2FE016D729D5/Position/C64416")
              .done(function (data) {
                  for (i = 0; i < data.totalItemsCount; i++) {
                      //createMarker(data.items[i], "icono-21.png"); 
-                     createMarker(data.items[i], "tavo.png");
-                     if (autof == 1)
-                         $('#my_map').gmap3('get').panTo(new google.maps.LatLng(data.items[i].pos.y, data.items[i].pos.x));
+                     createMarker(data.items[i], "21.png");
                  }
              })
             .fail(function () {
                 console.log("error");
             })
-
             jqxhr.always(function () {
                 setTimeout(timer, 15000);
             });
+
+            if (autof == 1)
+                $('#my_map').gmap3("autofit");
         }
 
         function createMarker(data,imagen) {

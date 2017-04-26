@@ -46,7 +46,11 @@
     <Content Include="images\footer.png" />
     <Content Include="images\footer_lodyas.png" />
     <Content Include="images\logo_branix.png" />
+    <Content Include="images\logo_branix.svg" />
+    <Content Include="images\logo_toyo.svg" />
+    <Content Include="images\logo_vildosola.svg" />
     <Content Include="images\logo_vilrac.png" />
+    <Content Include="images\negro.png" />
     <Content Include="images\tavo.png" />
     <Content Include="images\top.jpg" />
     <Content Include="images\tt.png" />
